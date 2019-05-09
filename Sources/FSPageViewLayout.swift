@@ -45,7 +45,7 @@ class FSPagerViewLayout: UICollectionViewLayout {
     
     deinit {
         #if !os(tvOS)
-            NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+            NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
         #endif
     }
     

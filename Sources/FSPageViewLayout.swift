@@ -250,7 +250,7 @@ class FSPagerViewLayout: UICollectionViewLayout {
     
     fileprivate func commonInit() {
         #if !os(tvOS)
-            NotificationCenter.default.addObserver(self, selector: #selector(didReceiveNotification(notification:)), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(didReceiveNotification(notification:)), name: UIDevice.orientationDidChangeNotification, object: nil)
         #endif
     }
     
